@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Scale Degree Identification</title>
+  </head>
+  <body>
+    <nav class = "navbar">
+      <div class="home">
+      </div>
+      <div class="fraction" id = "fraction">10/10</div>
+      <div class="percentage" id = "percentage">100%</div>
+      <div class="settings">
+
+      </div>
+    </nav>
+    <div class="body">
+      <div class="game">
+        <div class="question">
+          <div class="ScaleName" id = "SName"></div>
+          <div class="Scale" id = "Scale"></div>
+          <div class="Degree" id = "Degree"></div>
+        </div>
+        <div class="answer">
+          <div onclick="checkCorrect('C#')" class="C#" id="C#" role="button" style="margin: 8px; padding: 10px;" >C#</div>
+          <div onclick="checkCorrect('D#')" class="D#" id="D#" role="button" style="margin: 8px; padding: 10px;">D#</div>
+          <div onclick="checkCorrect('E#')" class="E#" id="E#" role="button" style="margin: 8px; padding: 10px;">E#</div>
+          <div onclick="checkCorrect('F#')" class="F#" id="F#" role="button" style="margin: 8px; padding: 10px;">F#</div>
+          <div onclick="checkCorrect('G#')" class="G#" id="G#" role="button" style="margin: 8px; padding: 10px;">G#</div>
+          <div onclick="checkCorrect('A#')" class="A#" id="A#" role="button" style="margin: 8px; padding: 10px;">A#</div>
+          <div onclick="checkCorrect('B#')" class="B#" id="B#" role="button" style="margin: 8px; padding: 10px;">B#</div>
+          <div onclick="checkCorrect('C')" class="C" id="C" role="button" style="margin: 8px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 10px">C</div>
+          <div onclick="checkCorrect('D')" class="D" id="D" role="button" style="margin: 8px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 10px">D</div>
+          <div onclick="checkCorrect('E')" class="E" id="E" role="button" style="margin: 8px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 10px">E</div>
+          <div onclick="checkCorrect('F')" class="F" id="F" role="button" style="margin: 8px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 10px">F</div>
+          <div onclick="checkCorrect('G')" class="G" id="G" role="button" style="margin: 8px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 10px">G</div>
+          <div onclick="checkCorrect('A')" class="A" id="A" role="button" style="margin: 8px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 10px">A</div>
+          <div onclick="checkCorrect('B')" class="B" id="B" role="button" style="margin: 8px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 10px">B</div>
+          <div onclick="checkCorrect('Cb')" class="Cb" id="Cb" role="button" style="margin: 8px; padding: 10px; padding-right: 11px;">C♭</div>
+          <div onclick="checkCorrect('Db')" class="Db" id="Db" role="button" style="margin: 8px; padding: 10px; padding-right: 11px;">D♭</div>
+          <div onclick="checkCorrect('Eb')" class="Eb" id="Eb" role="button" style="margin: 8px; padding: 10px; padding-right: 11px;">E♭</div>
+          <div onclick="checkCorrect('Fb')" class="Fb" id="Fb" role="button" style="margin: 8px; padding: 10px; padding-right: 11px;">F♭</div>
+          <div onclick="checkCorrect('Gb')" class="Gb" id="Gb" role="button" style="margin: 8px; padding: 10px; padding-right: 11px;">G♭</div>
+          <div onclick="checkCorrect('Ab')" class="Ab" id="Ab" role="button" style="margin: 8px; padding: 10px; padding-right: 11px;">A♭</div>
+          <div onclick="checkCorrect('Bb')" class="Bb" id="Bb" role="button" style="margin: 8px; padding: 10px; padding-right: 11px;">B♭</div>
+
+        </div>
+      </div>
+      <div class="toggle" id="toggle" onclick="toggle()"> Toggle Scale </div>
+      </div>
+      <div class="subtitles">
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
