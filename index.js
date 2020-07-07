@@ -70,6 +70,8 @@ scaleElement.innerHTML = currentScale.scale;
 scaleElementName.innerHTML = currentScale.name;
 degreeElement.innerHTML = template;
 fractionElement.innerHTML = numCorrect.toString() + "/" + numAttempted.toString();
+
+
 if (numAttempted == 0){
   var percentageNumber = 0;
 } else {
@@ -92,13 +94,19 @@ function checkCorrect(id) {
       numCorrect += 1;
     }
     attempted = false;
-    reset();
+    console.log("starting")
+    showCorrect(id);
+    timeout = setTimeout(reset,700)
+    console.log("ending")
   }
 }
 
 function makeWrong(id) {
   wrongElement = document.getElementById(id);
-  wrongElement.style.backgroundColor = "#931f1f";
+  wrongElement.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--wrong-border-color');
+  wrongElement.style.backgroundImage = 'linear-gradient(' +
+                                        getComputedStyle(document.documentElement).getPropertyValue('--wrong-bg-gradient1') + ", " +
+                                        getComputedStyle(document.documentElement).getPropertyValue('--wrong-bg-gradient2');
 }
 
 function reset() {
@@ -108,7 +116,6 @@ function reset() {
 
   scaleElement.innerHTML = currentScale.scale;
   scaleElementName.innerHTML = currentScale.name;
-  console.log(numCorrect, numAttempted)
   degreeElement.innerHTML = template;
   fractionElement.innerHTML = numCorrect.toString() + "/" + numAttempted.toString();
 
@@ -121,8 +128,21 @@ function reset() {
 
   for (var i = 0; i < 21; i++){
     element = document.getElementById(allIDs[i]);
-    element.style.backgroundColor = "LightGrey";
+    element.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--default-border-color');
+    element.style.backgroundImage = 'linear-gradient(' +
+                                          getComputedStyle(document.documentElement).getPropertyValue('--default-bg-gradient1') + ", " +
+                                          getComputedStyle(document.documentElement).getPropertyValue('--default-bg-gradient2');
   }
+}
+
+function showCorrect(id) {
+  correctElement = document.getElementById(id);
+  console.log(id, correctElement);
+  correctElement.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--correct-border-color');
+  correctElement.style.backgroundImage = 'linear-gradient(' +
+                                        getComputedStyle(document.documentElement).getPropertyValue('--correct-bg-gradient1') + ", " +
+                                        getComputedStyle(document.documentElement).getPropertyValue('--correct-bg-gradient2');
+
 }
 
 function toggle() {
